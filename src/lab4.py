@@ -1,9 +1,9 @@
 class Lamp:
-    def __init__(self, type="LED", power=0, led_count=0, manufacturer="Unknown"):
+    def __init__(self, type="LED", power=0, led_count=0, fabricator="Unknown"):
         self.__type = type
         self.__power = power
         self.__led_count = led_count
-        self.__manufacturer = manufacturer
+        self.__fabricator = fabricator
         self.warranty_period = 1
         self.color = "White"
 
@@ -16,24 +16,24 @@ class Lamp:
     def get_led_count(self):
         return self.__led_count
 
-    def get_manufacturer(self):
-        return self.__manufacturer
+    def get_fabricator(self):
+        return self.__fabricator
 
     def __str__(self):
         return (
             f"Lamp(type={self.__type}, power={self.__power}W, led_count={self.__led_count}, "
-            f"manufacturer={self.__manufacturer}, warranty_period={self.warranty_period}, color={self.color})"
+            f"fabricator={self.__fabricator}, warranty_period={self.warranty_period}, color={self.color})"
         )
 
     def __repr__(self):
         return (
             f"Lamp(type='{self.__type}', power={self.__power}, led_count={self.__led_count}, "
-            f"manufacturer='{self.__manufacturer}', warranty_period={self.warranty_period}, color='{self.color}')"
+            f"fabricator='{self.__fabricator}', warranty_period={self.warranty_period}, color='{self.color}')"
         )
 
     def __del__(self):
         print(
-            f"Lamp object with type '{self.__type}' and manufacturer '{self.__manufacturer}' is being deleted"
+            f"Lamp object with type '{self.__type}' and fabricator '{self.__fabricator}' is being deleted"
         )
 
 
